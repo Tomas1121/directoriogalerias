@@ -1,0 +1,192 @@
+/* Estilo general del cuerpo */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+/* Estilos para la sección de inicio de sesión */
+.login-section {
+  margin-top: 100px;
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  max-width: 90%; /* Limita el ancho máximo para que sea responsive */
+}
+
+.login-section input {
+  width: 100%; /* Ajusta el ancho del input al contenedor */
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-section button {
+  width: 100%; /* Botón se ajusta al contenedor */
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-section button:hover {
+  background-color: #45a049;
+}
+
+.error-msg {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Estilos para el contenido principal */
+.header {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Permite que las imágenes se ajusten en pantallas pequeñas */
+}
+
+.fixed-img {
+  width: 150px;
+  height: auto;
+  margin: 0 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+h1 {
+  margin-top: 20px;
+  color: #333;
+}
+
+input {
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+  width: 80%;
+  max-width: 500px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen de filtro que aparece solo cuando el filtro está activo */
+.filter-image {
+  display: none; /* Oculta la imagen por defecto */
+  width: 200px;
+  height: auto;
+  margin-top: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Tabla */
+table {
+  margin-top: 20px;
+  border-collapse: collapse;
+  width: 90%;
+  max-width: 1200px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Media Query para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column; /* Pone las imágenes en una columna en pantallas pequeñas */
+    align-items: center;
+  }
+
+  .fixed-img {
+    width: 120px; /* Reducir el tamaño de las imágenes en pantallas pequeñas */
+    margin: 10px 0;
+  }
+
+  input {
+    width: 90%; /* Hacer el campo de filtro más ancho en móviles */
+    font-size: 14px;
+  }
+
+  .filter-image {
+    width: 150px; /* Ajustar el tamaño de la imagen de filtro en móviles */
+  }
+
+  table {
+    width: 100%; /* Asegurar que la tabla ocupe todo el ancho en pantallas pequeñas */
+    font-size: 14px; /* Reducir el tamaño de la fuente en la tabla */
+  }
+
+  th, td {
+    padding: 8px; /* Reducir el padding en pantallas pequeñas */
+  }
+
+  /* Ajustes para el formulario en pantallas pequeñas */
+  .login-section {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .login-section input, .login-section button {
+    font-size: 14px;
+  }
+}
+
+/* Media Query para tablets (pantallas medianas) */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: row; /* Coloca las imágenes en fila en pantallas medianas */
+  }
+
+  .fixed-img {
+    width: 130px; /* Ajuste para tablets */
+    margin: 5px;
+  }
+
+  input {
+    width: 75%; /* Reducir el tamaño del input para tablets */
+  }
+
+  table {
+    width: 90%; /* Ajuste de la tabla para tablets */
+  }
+
+  /* Ajustes para el formulario en tablets */
+  .login-section {
+    width: 80%;
+  }
+}

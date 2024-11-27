@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filtro de Datos en Excel</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+  
+  <div id="loginSection" class="login-section">
+    <h2>Iniciar Sesión</h2>
+    <input type="text" id="username" placeholder="Nombre de usuario">
+    <input type="password" id="password" placeholder="Contraseña">
+    <button onclick="login()">Iniciar Sesión</button>
+    <p id="errorMsg" class="error-msg"></p>
+  </div>
+  
+
+  <!-- Contenido de filtro oculto inicialmente -->
+  <div id="contentSection" style="display: none;">
+    <div class="header">
+      <!-- Imágenes fijas en la parte superior 
+      <img src="netcom.jpeg" alt="Imagen 1" class="fixed-img">
+      <img src="cc.jpg" alt="Imagen 2" class="fixed-img">
+    </div>-->
+
+    <h1>Directorio de locales </h1>
+
+    <!-- Input para el filtro -->
+    <input type="text" id="filterInput" placeholder="Escribe para filtrar...">
+
+    <!-- Imagen que solo se muestra cuando el filtro está activo
+    <img src="netcom.jpeg" alt="Imagen de filtro aplicado" id="filterImage" class="filter-image"> -->
+
+    <!-- Tabla para mostrar los datos -->
+    <table id="dataTable">
+      <thead id="tableHead"></thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
